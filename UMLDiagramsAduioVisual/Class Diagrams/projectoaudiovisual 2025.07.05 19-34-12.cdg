@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="projectoaudiovisual">
+  <ClassDiagramComponents>
+    <Class name="ProjectoAudioVisual" package="projectoaudiovisual" visibility="public" xPosition="1449.0" yPosition="1364.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Actor" package="projectoaudiovisual.uni1a" visibility="public" xPosition="675.0" yPosition="292.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="paisOrigen" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="paisOrigen"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPaisOrigen" returnType="String" visibility="public"/>
+        <Method name="setPaisOrigen" returnType="void" visibility="public">
+          <Argument type="String" name="paisOrigen"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ContenidoAudiovisual" package="projectoaudiovisual.uni1a" visibility="public" isAbstract="true" xPosition="1202.0" yPosition="852.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="protected"/>
+        <Field name="anioLanzamiento" type="int" visibility="protected"/>
+        <Field name="genero" type="String" visibility="protected"/>
+        <Field name="id" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="int" name="anioLanzamiento"/>
+          <Argument type="String" name="genero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getAnioLanzamiento" returnType="int" visibility="public"/>
+        <Method name="setAnioLanzamiento" returnType="void" visibility="public">
+          <Argument type="int" name="anioLanzamiento"/>
+        </Method>
+        <Method name="getGenero" returnType="String" visibility="public"/>
+        <Method name="setGenero" returnType="void" visibility="public">
+          <Argument type="String" name="genero"/>
+        </Method>
+        <Method name="reproducir" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cortometraje" package="projectoaudiovisual.uni1a" visibility="public" xPosition="344.0" yPosition="583.0">
+      <Fields>
+        <Field name="directorCorto" type="String" visibility="private"/>
+        <Field name="duracionMinutos" type="int" visibility="private"/>
+        <Field name="festivalGanado" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="int" name="anioLanzamiento"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="String" name="directorCorto"/>
+          <Argument type="int" name="duracionMinutos"/>
+          <Argument type="String" name="festivalGanado"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDirectorCorto" returnType="String" visibility="public"/>
+        <Method name="setDirectorCorto" returnType="void" visibility="public">
+          <Argument type="String" name="directorCorto"/>
+        </Method>
+        <Method name="getDuracionMinutos" returnType="int" visibility="public"/>
+        <Method name="setDuracionMinutos" returnType="void" visibility="public"/>
+        <Method name="getFestivalGanado" returnType="String" visibility="public"/>
+        <Method name="setFestivalGanado" returnType="void" visibility="public"/>
+        <Method name="reproducir" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Documental" package="projectoaudiovisual.uni1a" visibility="public" xPosition="1811.0" yPosition="945.0">
+      <Fields>
+        <Field name="temaPrincipal" type="String" visibility="private"/>
+        <Field name="investigadores" type="List&lt;Investigador&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="int" name="anioLanzamiento"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="String" name="temaPrincipal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTemaPrincipal" returnType="String" visibility="public"/>
+        <Method name="setTemaPrincipal" returnType="void" visibility="public">
+          <Argument type="String" name="temaPrincipal"/>
+        </Method>
+        <Method name="agregarInvestigador" returnType="void" visibility="public">
+          <Argument type="Investigador" name="investigador"/>
+        </Method>
+        <Method name="getInvestigadores" returnType="List&lt;Investigador&gt;" visibility="public"/>
+        <Method name="reproducir" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Investigador" package="projectoaudiovisual.uni1a" visibility="public" xPosition="2371.0" yPosition="945.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="especialidad" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="especialidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getEspecialidad" returnType="String" visibility="public"/>
+        <Method name="setEspecialidad" returnType="void" visibility="public">
+          <Argument type="String" name="especialidad"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="projectoaudiovisual.uni1a" visibility="public" xPosition="1122.0" yPosition="254.0">
+      <Fields>
+        <Field name="director" type="String" visibility="private"/>
+        <Field name="duracionMinutos" type="int" visibility="private"/>
+        <Field name="actores" type="List&lt;Actor&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="int" name="anioLanzamiento"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="String" name="director"/>
+          <Argument type="int" name="duracionMinutos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDirector" returnType="String" visibility="public"/>
+        <Method name="setDirector" returnType="void" visibility="public">
+          <Argument type="String" name="director"/>
+        </Method>
+        <Method name="getDuracionMinutos" returnType="int" visibility="public"/>
+        <Method name="setDuracionMinutos" returnType="void" visibility="public"/>
+        <Method name="agregarActor" returnType="void" visibility="public">
+          <Argument type="Actor" name="actor"/>
+        </Method>
+        <Method name="getActores" returnType="List&lt;Actor&gt;" visibility="public"/>
+        <Method name="reproducir" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SerieDeTV" package="projectoaudiovisual.uni1a" visibility="public" isAbstract="true" xPosition="1688.0" yPosition="474.0">
+      <Fields>
+        <Field name="numeroTemporadas" type="int" visibility="private"/>
+        <Field name="temporadas" type="List&lt;Temporada&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="int" name="anioLanzamiento"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="int" name="numeroTemporadas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroTemporadas" returnType="int" visibility="public"/>
+        <Method name="setTemporadas" returnType="void" visibility="public">
+          <Argument type="int" name="numeroTemporadas"/>
+        </Method>
+        <Method name="agregarTemporada" returnType="void" visibility="public">
+          <Argument type="Temporada" name="temporada"/>
+        </Method>
+        <Method name="getTemporadas" returnType="List&lt;Temporada&gt;" visibility="public"/>
+        <Method name="getNumeroTotalTemporadas" returnType="int" visibility="public"/>
+        <Method name="reproducir" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Temporada" package="projectoaudiovisual.uni1a" visibility="public" xPosition="2391.0" yPosition="502.0">
+      <Fields>
+        <Field name="numeroTemporada" type="int" visibility="private"/>
+        <Field name="cantidadEpisodios" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="numeroTemporada"/>
+          <Argument type="int" name="cantidadEpisodio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroTemporada" returnType="int" visibility="public"/>
+        <Method name="setNumerotemporada" returnType="void" visibility="public">
+          <Argument type="int" name="numeroTemporada"/>
+        </Method>
+        <Method name="getCantidadEpisodios" returnType="int" visibility="public"/>
+        <Method name="setCantidadEpisodios" returnType="void" visibility="public">
+          <Argument type="int" name="cantidadEpisodios"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VideoYouTube" package="projectoaudiovisual.uni1a" visibility="public" xPosition="386.0" yPosition="959.0">
+      <Fields>
+        <Field name="url" type="String" visibility="private"/>
+        <Field name="canal" type="String" visibility="private"/>
+        <Field name="duracionSegundos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="int" name="anioLanzamiento"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="String" name="url"/>
+          <Argument type="String" name="canal"/>
+          <Argument type="int" name="duracionSegundos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUrl" returnType="String" visibility="public"/>
+        <Method name="setUrl" returnType="void" visibility="public">
+          <Argument type="String" name="url"/>
+        </Method>
+        <Method name="getCanal" returnType="String" visibility="public"/>
+        <Method name="setCanal" returnType="void" visibility="public"/>
+        <Method name="getDuracionSegundos" returnType="int" visibility="public"/>
+        <Method name="setDuracionSegundos" returnType="void" visibility="public">
+          <Argument type="int" name="duracionSegundos"/>
+        </Method>
+        <Method name="reproducir" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="projectoaudiovisual.uni1a.VideoYouTube" target="projectoaudiovisual.uni1a.ContenidoAudiovisual"/>
+    <UseRelation source="projectoaudiovisual.uni1a.SerieDeTV" target="projectoaudiovisual.uni1a.Temporada" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="projectoaudiovisual.uni1a.SerieDeTV" target="projectoaudiovisual.uni1a.ContenidoAudiovisual"/>
+    <UseRelation source="projectoaudiovisual.uni1a.Documental" target="projectoaudiovisual.uni1a.Investigador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="projectoaudiovisual.uni1a.Pelicula" target="projectoaudiovisual.uni1a.Actor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="temporadas" source="projectoaudiovisual.uni1a.SerieDeTV" target="projectoaudiovisual.uni1a.Temporada" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Temporada&gt;"/>
+    <IsRelation name="is" source="projectoaudiovisual.uni1a.Pelicula" target="projectoaudiovisual.uni1a.ContenidoAudiovisual"/>
+    <IsRelation name="is" source="projectoaudiovisual.uni1a.Cortometraje" target="projectoaudiovisual.uni1a.ContenidoAudiovisual"/>
+    <HasRelation name="actores" source="projectoaudiovisual.uni1a.Pelicula" target="projectoaudiovisual.uni1a.Actor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Actor&gt;"/>
+    <HasRelation name="investigadores" source="projectoaudiovisual.uni1a.Documental" target="projectoaudiovisual.uni1a.Investigador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Investigador&gt;"/>
+    <IsRelation name="is" source="projectoaudiovisual.uni1a.Documental" target="projectoaudiovisual.uni1a.ContenidoAudiovisual"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
